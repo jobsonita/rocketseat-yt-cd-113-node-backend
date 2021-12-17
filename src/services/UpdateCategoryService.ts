@@ -1,11 +1,11 @@
 import { getRepository } from "typeorm";
 import { Category } from "../entities/Category";
 
-type CategoryUpdateRequest = {
+interface CategoryUpdateRequest {
   id: string;
   name?: string;
   description?: string;
-};
+}
 
 export class UpdateCategoryService {
   async execute({
